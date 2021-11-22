@@ -22,7 +22,7 @@
 
 typedef void (^PFURLSessionTaskCompletionHandler)(NSData *data, NSURLResponse *response, NSError *error);
 
-@interface PFURLSession () <NSURLSessionDelegate, NSURLSessionTaskDelegate> {
+@interface PFURLSession () <NSURLSessionDataDelegate, NSURLSessionTaskDelegate> {
     dispatch_queue_t _sessionTaskQueue;
     NSURLSession *_urlSession;
     NSMutableDictionary *_delegatesDictionary;
